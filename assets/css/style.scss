@@ -1,6 +1,8 @@
-/* Reset */
-html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,table,caption,tbody,tfoot,thead,tr,th,td,article,aside,canvas,details,embed,figure,figcaption,footer,header,hgroup,menu,nav,output,ruby,section,summary,time,mark,audio,video{border:0;font-size:100%;font:inherit;vertical-align:baseline;margin:0;padding:0}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1}blockquote,q{quotes:none}blockquote:before,blockquote:after,q:before,q:after{content:none}table{border-collapse:collapse;border-spacing:0}
-*, *:before, *:after { -moz-box-sizing: border-box; -webkit-box-sizing: border-box; box-sizing: border-box; }
+---
+# Make it work with Jekyll
+---
+
+@import "reset";
 
 /* Clearfix */
 .clearfix:after {
@@ -9,38 +11,6 @@ html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abb
 	clear: both;
 }
 .hidden { display: none; }
-
-/* Icons */
-@font-face {
-	font-family: 'icons';
-		src: url('../fonts/icons.eot');
-		src: url('../fonts/icons.eot#iefix') format('embedded-opentype'),
-		url('../fonts/icons.woff') format('woff'),
-		url('../fonts/icons.ttf') format('truetype'),
-		url('../fonts/icons.svg#icons') format('svg');
-	font-weight: normal;
-	font-style: normal;
-}
-
-[class^="icon-"]:before, [class*=" icon-"]:before {
-	font-family: "icons";
-	font-style: normal;
-	font-weight: normal;
-	speak: none;
-	display: inline-block;
-	text-decoration: inherit;
-	text-align: center;
-	font-variant: normal;
-	text-transform: none;
-	line-height: 1em;
-}
-.icon-facebook:before { content: '\e802'; }
-.icon-facebook-squared:before { content: '\e800'; }
-.icon-twitter:before { content: '\e801'; }
-.icon-twitter-1:before { content: '\e804'; }
-.icon-facebook-circled:before { content: '\e805'; }
-.icon-twitter-circled:before { content: '\e806'; }
-.icon-facebook-rect:before { content: '\e803'; }
 
 /* Spacing */
 .post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre {
@@ -69,88 +39,91 @@ h2 {
 	color: #bbb;
 }
 
-.profile #wrapper {
-	padding: 100px 40px 0px;
-	max-width: 600px;
-	margin: 0 auto;
+.icon {
+	width: 20px;
+	fill: #222;
 }
 
-.profile #header {
-	border-bottom: 1px solid #eee;
-	margin-bottom: 40px;
-	padding-bottom: 40px;
-	text-align: center;
-	position: relative;
+.profile {
+	#wrapper {
+		padding: 100px 40px 0px;
+		max-width: 600px;
+		margin: 0 auto;
+	}
+
+	#header {
+		border-bottom: 1px solid #eee;
+		margin-bottom: 40px;
+		padding-bottom: 40px;
+		text-align: center;
+		position: relative;
+	}
+
+	.avatar {
+		display: inline-block;
+		width: 80px;
+		height: 80px;
+		border-radius: 50%;
+		margin-bottom: 20px;
+	}
+
+	h1 {
+		font-weight: 400;
+		letter-spacing: 0px;
+		font-size: 20px;
+		color: #222;
+	}
+
+	h2 {
+		font-size: 20px;
+		  font-weight: 300;
+		  color: #aaa;
+		  margin-top: 10px;
+		  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+		  font-style: normal;
+	}
 }
 
-.profile #avatar {
-	display: inline-block;
-	width: 80px;
-	height: 80px;
-	border-radius: 50%;
-	margin-bottom: 20px;
-}
+nav {
+	&.main-nav {
+		padding: 20px 20px 0;
 
-.profile h1 {
-	font-weight: 400;
-	letter-spacing: 0px;
-	font-size: 20px;
-	color: #222;
-}
+		/*max-width: 600px;*/
+		/*width:100%;*/
+		background: #fff;
+		background: rgba(255,255,255,.90);
+		margin: 0 auto;
+		text-align: right;
+		/*position: fixed;*/
+		z-index: 100;
+	}
 
-.profile h2 {
-	font-size: 20px;
-	  font-weight: 300;
-	  color: #aaa;
-	  margin-top: 10px;
-	  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-	  font-style: normal;
+	&.main-nav a {
+		top: 8px;
+		right: 6px;
+		padding: 8px 12px;
+		color: #5badf0;
+		font-size: 13px;
+		/*font-weight: bold;*/
+		line-height: 1.35;
+		border-radius: 3px;
 
-}
-
-nav.main-nav {
-	padding: 20px 20px 0;
-
-	/*max-width: 600px;*/
-	/*width:100%;*/
-	background: #fff;
-	background: rgba(255,255,255,.90);
-	margin: 0 auto;
-	text-align: right;
-	/*position: fixed;*/
-	z-index: 100;
-}
-
-nav.main-nav a {
-	top: 8px;
-	right: 6px;
-	padding: 8px 12px;
-	color: #5badf0;
-	font-size: 13px;
-	/*font-weight: bold;*/
-	line-height: 1.35;
-	border-radius: 3px;
-
-}
-nav.main-nav a.cta {
-	background: #5badf0;
-	color: #fff;
-	margin-left: 12px;
+	}
 }
 
 #wrapper {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 60px 40px 100px 40px;
-}
-
-#wrapper.home {
 	max-width: 600px;
 	margin: 0 auto;
-	padding: 0px 40px 20px 40px;
+	padding: 60px 40px 100px 40px;
+
+	&.home {
+		max-width: 600px;
+		margin: 0 auto;
+		padding: 0px 40px 20px 40px;
+	}
 }
 
-.home #avatar {
+.home .avatar {
 	float: right;
 	width: 40px;
 	height: 40px;
@@ -207,8 +180,6 @@ em, i { font-style: italic; }
 	color: #aaa;
 }
 
-
-
 .home h1 {
 	font-size: 30px;
 	letter-spacing: -1px;
@@ -223,7 +194,6 @@ em, i { font-style: italic; }
 
 .post header {
 	text-align:center;
-
 }
 
 .post h1 {
@@ -291,25 +261,25 @@ hr {
 	background: #eee;
 }
 
-span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
+// span.code { font-family:Menlo, Monaco, Courier; background-color:#EEE; font-size:14px; }
 
-pre	{
-	font-family:Menlo, Monaco, Courier;
-	white-space:pre-wrap;
-	/*border: 1px solid #ddd;*/
-	padding:20px;
-	background-color:#fdfdfd;
-	/*font-size:14px;*/
-	overflow:auto;
-	border-radius: 3px;
-	background: #272b2d;
-	  font-family: 'Source Code Pro',Menlo,monospace;
-	  font-size: 13px;
-	  line-height: 1.5em;
-	  font-weight: 500;
-	color: #d0d4d7;
-
-}
+// pre	{
+// 	font-family:Menlo, Monaco, Courier;
+// 	white-space:pre-wrap;
+// 	/*border: 1px solid #ddd;*/
+// 	padding:20px;
+// 	background-color:#fdfdfd;
+// 	/*font-size:14px;*/
+// 	overflow:auto;
+// 	border-radius: 3px;
+// 	background: #272b2d;
+// 	  font-family: 'Source Code Pro',Menlo,monospace;
+// 	  font-size: 13px;
+// 	  line-height: 1.5em;
+// 	  font-weight: 500;
+// 	color: #d0d4d7;
+//
+// }
 
 table {
 	width: 100%;
