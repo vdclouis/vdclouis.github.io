@@ -42,7 +42,12 @@ h2 {
 .icon {
 	width: 20px;
 	height: 20px;
-	fill: #222;
+	fill: #666;
+	transition: fill .4s ease-in-out;
+
+	&:hover {
+		fill: #444;
+	}
 }
 
 .share {
