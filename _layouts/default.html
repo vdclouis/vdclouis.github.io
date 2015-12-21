@@ -13,10 +13,10 @@
     <body>
         {% include icons.html %}
 
-        {% include navigation.html %}
-
         {% if page.profile %}
             {% include profile.html %}
+        {% else %}
+            {% include navigation.html %}
         {% endif %}
 
         <section id="wrapper" class="{% if page.profile %}home{% endif %}">

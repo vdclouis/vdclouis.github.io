@@ -1,6 +1,8 @@
 ---
 # Make it work with Jekyll
 ---
+$green: #159957;
+$blue: #155799;
 
 @import "reset";
 
@@ -10,7 +12,6 @@
 	display: table;
 	clear: both;
 }
-.hidden { display: none; }
 
 /* Spacing */
 .post h1, h3, h4, h5, p, .post-body ul, #post-list li, pre {
@@ -59,7 +60,14 @@ h2 {
 	}
 }
 
+body > .main-nav {
+	background-image: linear-gradient(120deg, $blue, $green);
+	height: 60px;
+}
+
 .profile {
+	 background-image: linear-gradient(120deg, $blue, $green);
+
 	#wrapper {
 		padding: 100px 40px 0px;
 		max-width: 600px;
@@ -67,7 +75,7 @@ h2 {
 	}
 
 	#header {
-		border-bottom: 1px solid #eee;
+		border: none;
 		margin-bottom: 40px;
 		padding-bottom: 40px;
 		text-align: center;
@@ -80,19 +88,20 @@ h2 {
 		height: 80px;
 		border-radius: 50%;
 		margin-bottom: 20px;
+		box-shadow: 0 0 0 3px rgba(255, 255, 255, .1), 0 0 0 4px rgba(255, 255, 255, .3);
 	}
 
 	h1 {
 		font-weight: 400;
 		letter-spacing: 0px;
 		font-size: 20px;
-		color: #222;
+		color: #fff;
 	}
 
 	h2 {
 		font-size: 20px;
 		  font-weight: 300;
-		  color: #aaa;
+		  color: rgba(255, 255, 255, .7);
 		  margin-top: 10px;
 		  font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 		  font-style: normal;
@@ -105,8 +114,6 @@ nav {
 
 		/*max-width: 600px;*/
 		/*width:100%;*/
-		background: #fff;
-		background: rgba(255,255,255,.90);
 		margin: 0 auto;
 		text-align: right;
 		/*position: fixed;*/
@@ -116,13 +123,26 @@ nav {
 	&.main-nav a {
 		top: 8px;
 		right: 6px;
+		background-color: rgba(255, 255, 255, 0.08);
 		padding: 8px 12px;
-		color: #5badf0;
+		color: rgba(255, 255, 255, 0.7);
 		font-size: 13px;
 		/*font-weight: bold;*/
 		line-height: 1.35;
-		border-radius: 3px;
+		border-radius: 4px;
+		border: 1px solid;
+		border-color: rgba(255, 255, 255, .2);
 
+		&:not(:first-child) {
+			margin-left: 15px;
+		}
+
+		&:hover {
+			color: rgba(255, 255, 255, 0.8);
+		    text-decoration: none;
+		    background-color: rgba(255, 255, 255, 0.2);
+		    border-color: rgba(255, 255, 255, 0.3);
+		}
 	}
 }
 
@@ -149,12 +169,16 @@ nav {
 /*Accent color*/
 a,
 #title,
-#post-list a:hover,
+
 #post-list li:hover .dates,
 #title:hover {
 	text-decoration: none;
 	color: #5badf0;
 	color: #5694f1;
+}
+
+#post-list a:hover {
+	color: darken($green, 10%);
 }
 
 p a { color: #5694f1; }
@@ -213,7 +237,7 @@ em, i { font-style: italic; }
 
 .post h1 {
 	margin-bottom: 20px;
-	color: #222;
+	color: $green;
 	font: 300 32px/1.4em "Helvetica Neue", Helvetica,Arial,sans-serif;
 }
 
@@ -373,7 +397,7 @@ Post List
 }
 
 #post-list a {
-	color: #333;
+	color: $green;
 	display: block;
 	font: bold 19px/1.7 "Helvetica Neue",helvetica,Arial,sans-serif;
 }

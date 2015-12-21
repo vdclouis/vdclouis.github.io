@@ -12,5 +12,6 @@ While I was at school I co-founded a creative agency, [Integral Studios](http://
 
 [<svg class="icon icon-github"><use xlink:href="#icon-github"></use></svg>](https://github.com/vdclouis)
 [<svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>](https://twitter.com/vdclouis)
+[<svg class="icon icon-stack-overflow"><use xlink:href="#icon-stack-overflow"></use></svg>](http://stackoverflow.com/users/1407506/vdclouis)
 
 {% include footer.html %}
