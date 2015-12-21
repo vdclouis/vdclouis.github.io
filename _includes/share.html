@@ -1,0 +1,17 @@
+<a class="share twitter"
+   href="https://twitter.com/intent/tweet?text={{ site.domain_name }}{{ page.url }} - {{page.title}} by @{{ site.authorTwitter }}"
+>
+    <svg class="icon icon-twitter"><use xlink:href="#icon-twitter"></use></svg>
+    <span>Tweet</span>
+</a>
+
+<a class="share facebook" href="#" onclick="
+    window.open(
+      'https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(location.href),
+      'facebook-share-dialog',
+      'width=626,height=436');
+    return false;"
+>
+    <svg class="icon icon-facebook"><use xlink:href="#icon-facebook"></use></svg>
+    <span>Share</span>
+</a>

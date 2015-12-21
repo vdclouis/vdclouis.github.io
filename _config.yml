@@ -1,0 +1,41 @@
+name: Louis
+description: Beats 'n Bytes &mdash; Coffee 'n Code
+meta_description: Louis Van de Calseyde's personal place on the web
+
+aboutPage: true
+
+highlighter: pygments
+
+paginate: 20
+baseurl: /
+domain_name: 'https://louis.gent'
+google_analytics: 'UA-71606455-1'
+disqus: false
+disqus_shortname: 'your-disqus-shortname'
+
+# Details for the RSS feed generator
+url:            'http://your-blog-url.example.com'
+author:         'Louis Van de Calseyde'
+authorTwitter:  'vdclouis'
+
+permalink:       /:year/:title/
+
+defaults:
+    -
+        scope:
+            path: "" # empty string for all files
+            type: pages
+        values:
+            layout: default
+    -
+        scope:
+            path: "" # empty string for all files
+            type: posts
+        values:
+            layout: post
+    -
+        scope:
+            path: ""
+            type: drafts
+        values:
+            layout: post

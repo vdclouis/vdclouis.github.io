@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="x-ua-compatible" content="ie=edge">
+        <title>{{ site.name }}{% if page.title %} - {{ page.title }}{% endif %}</title>
+        <meta name="description" content="{{ site.meta_description }}">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <link rel="shortcut icon" href="{{ site.baseurl }}assets/images/favicon.ico">
+        <link rel="stylesheet" href="{{ site.baseurl }}assets/css/style.css">
+    </head>
+    <body>
+        {% include icons.html %}
+
+        {% include navigation.html %}
+
+        {% if page.profile %}
+            {% include profile.html %}
+        {% endif %}
+
+        <section id="wrapper" class="{% if page.profile %}home{% endif %}">
+            {{ content }}
+        </section>
+
+        <script>
+            (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=
+            function(){(b[l].q=b[l].q||[]).push(arguments)});b[l].l=+new Date;
+            e=o.createElement(i);r=o.getElementsByTagName(i)[0];
+            e.src='https://www.google-analytics.com/analytics.js';
+            r.parentNode.insertBefore(e,r)}(window,document,'script','ga'));
+            ga('create','{{ site.google_analytics }}','auto');ga('send','pageview');
+        </script>
+    </body>
+</html>
