@@ -44,8 +44,6 @@ The trick is to use a transpiler. 2 popular transpilers are [Babel](http://babel
 Webpack 2, for example, will only transpile imports and exports to ES5. If you need to transpile the rest to ES5, you can use, what webpack calls, loaders. Loaders are basically plugins.
 We'll use the Babel loader for transpilation.
 
-<img class="x2 center" src="//babeljs.io/images/featurettes/blueprint.png">
-
 There is one catch though. Since version 6, Babel was modularized and uses presets to transpile your code.
 There's a preset called [es2015](http://babeljs.io/docs/plugins/preset-es2015/). You would think you could just use this one and you would be done, but here's the thing. The preset also includes the `transform-es2015-modules-commonjs` plugin. Which, you guessed it, transpiles your ES2015 modules to CommonJS.
 That way Webpack would not be able to tree shake and your final bundle would not be optimal.
