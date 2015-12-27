@@ -30,7 +30,7 @@ Basically Rollup does *dead code elimination*.
 
 <img class="x2 center" src="{{ site.baseurl }}assets/images/tree.png" />
 
-"So what not call it that, then?"
+"So why not call it that, then?"
 
 Well, actually instead of excluding dead code, it only includes live code. Confused? Rich Harris himself made an [explanatory blog post](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80) about this.
 
