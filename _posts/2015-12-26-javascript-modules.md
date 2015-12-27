@@ -1,8 +1,10 @@
 ---
-title: "JavaScript Modules"
+title: JavaScript Modules
 description: How to deal with them
-date: 2015-12-26 19:18:00
+date: {}
+published: true
 ---
+
 
 There are quite a few ways to split your JavaScript files into different chunks or modules.
 CommonJS (popularized by [node](https://nodejs.org)), AMD and the new native syntax introduced in ES2015.
