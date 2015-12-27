@@ -1,8 +1,10 @@
 ---
-title: "JavaScript Modules"
+title: JavaScript Modules
 description: How to deal with them
-date: 2015-12-26 19:18:00
+date: {}
+published: true
 ---
+
 
 There are quite a few ways to split your JavaScript files into different chunks or modules.
 CommonJS (popularized by [node](https://nodejs.org)), AMD and the new native syntax introduced in ES2015.
@@ -30,7 +32,7 @@ Basically Rollup does *dead code elimination*.
 
 <img class="x2 center" src="{{ site.baseurl }}assets/images/tree.png" />
 
-"So what not call it that, then?"
+"So why not call it that, then?"
 
 Well, actually instead of excluding dead code, it only includes live code. Confused? Rich Harris himself made an [explanatory blog post](https://medium.com/@Rich_Harris/tree-shaking-versus-dead-code-elimination-d3765df85c80) about this.
 
