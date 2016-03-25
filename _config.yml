@@ -4,7 +4,16 @@ meta_description: Louis Van de Calseyde's personal place on the web
 
 aboutPage: true
 
-highlighter: pygments
+# Conversion
+markdown: kramdown
+highlighter: rouge
+
+# Markdown Processors
+kramdown:
+    input: GFM
+
+# Plugins
+gems: [jekyll-paginate, jekyll-gist]
 
 paginate: 20
 baseurl: /

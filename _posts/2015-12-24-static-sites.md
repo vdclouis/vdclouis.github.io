@@ -1,5 +1,5 @@
 ---
-title: "Creating, hosting and deploying static sites"
+title: Creating, hosting and deploying static sites
 date: 2015-12-24 11:22:00
 description: Best options available
 ---
