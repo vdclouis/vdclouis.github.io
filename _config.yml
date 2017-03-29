@@ -23,7 +23,7 @@ disqus: true
 disqus_shortname: 'vdclouis'
 
 # Details for the RSS feed generator
-url:            'http://your-blog-url.example.com'
+url:            'http://louis.gent'
 author:         'Louis Van de Calseyde'
 authorTwitter:  'vdclouis'
 
